@@ -1,0 +1,50 @@
+.story {
+	&--modifier {
+		color: $blueColor;
+		padding: 70px 0;
+		@include sm-block(){
+			padding: 40px 0;
+		}
+	}
+	&-item {
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		width: 100%;
+		max-width: 540px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 18%;
+			display: block;
+			background: url('../img/logo/story-logo.png') 0 0 no-repeat;
+			background-size: cover;
+			width: 235px;
+			height: 229px;
+			@include xs-block(){
+				left: 18%;
+				z-index: -1;
+    			opacity: 0.2;
+			}
+			@include sm-block(){
+				left: 3%;
+				z-index: -1;
+    			opacity: 0.2;
+			}
+			@media(max-width: 1080px) {
+				left: 0;
+			}
+		}
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__text {
+			letter-spacing: 0.42px;
+			line-height: 22px;
+		}
+	}
+}
+
+.bottomText {
+	margin: 34px 0 50px;
+}

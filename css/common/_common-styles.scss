@@ -1,0 +1,159 @@
+.heading-1 {
+	font-family: $blackPlayfair;
+	font-size: 32px;
+	@media(max-width: 560px) {
+		font-size: 35px;
+	}
+}
+
+.heading-2 {
+	font-family: $boldPlayfair;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.heading-3 {
+	font-size: 24px;
+}
+
+.heading-4 {
+	font-size: 18px;
+}
+
+.heading-5 {
+	font-size: 15px;
+}
+
+@mixin line() {
+	@include xs-block(){
+		margin-bottom: 50px;
+	}
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -18px;
+		transform: translate(-50%, -50%);
+		display: block;
+		width: 50px;
+		height: 2px;
+		background-color: #c6c4c9;
+	}
+}
+
+.btn {
+	font-family: $blackRoboto;
+	color: $lightBlueColor;
+	border: 1px solid $lightBlueColor;
+	text-transform: uppercase;
+	padding: 9px 14px;
+	transition: 0.6s ease-in-out;
+	&:hover {
+		color: $mainColor;
+	    background-color: $lightBlueColor;
+	}
+	&-submit {
+		background: none;
+		padding: 10px 32px;
+		cursor: pointer;
+		outline: none;
+	}
+}
+
+.input-email {
+	padding: 15px 20px 15px 15px;
+    border: 1px solid #fff;
+    background: 0 0;
+    opacity: .5;
+    outline: 0;
+    color: #fff;
+}
+
+.submit {
+	width: 70px;
+    height: 48px;
+    background-color: rgba(255,255,255,.5);
+    background-image: url('../img/footer-ico/paper-plane-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+    	background-color: #fff;
+    }
+}
+
+.faceboock {
+	&:hover {
+	    background-color: #3b5998;	
+	}
+}
+
+.twitter {
+	background-position-x: 20%;
+	&:hover {
+		background-color: #1da1f2;
+	}
+}
+
+.dribble {
+    background-position-x: 41.5%;
+    &:hover {
+        background-color: #ea4c89;	
+    }
+}
+
+.instagram {
+	background-position-x: 62.5%;
+	&:hover {
+    	background-color: #c32aa3;
+	}
+}
+
+.google-plus {
+    background-position-x: 82%;
+    &:hover {
+    	background-color: #db4437;
+    }
+}
+
+.youtube {
+    background-position-x: 104%;
+    &:hover {
+    	background-color: red;
+    }
+}
+
+.up-btn {
+	display: inline-block;
+	background-color: #483679;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	&:hover {
+		background-color: #2e2549;
+	}
+	&::after {
+		content: "\f077";
+	    font-family: FontAwesome;
+	    font-size: 30px;
+	    line-height: 50px;
+	    color: #fff;
+	}
+}
+
+#up-btn-js.show {
+	opacity: 1;
+	visibility: visible;
+}

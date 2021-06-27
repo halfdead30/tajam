@@ -1,0 +1,117 @@
+.footer {
+	.row {
+		justify-content: space-between;
+		@media(max-width: 909px) {
+			margin: 0 auto;
+		}
+	}
+	&--modifier {
+		background: url('../img/bg/footer-bg.jpg') 0 0 no-repeat;
+		background-size: cover;
+		padding: 70px 0 63px;
+		@include sm-block(){
+			padding: 40px 0;
+		}
+	}
+	&-item {
+		width: 100%;
+		max-width: 283px;
+		@media(max-width: 909px) {
+			max-width: 100%;
+			padding-bottom: 20px;
+		}
+		&__logo {
+			display: block;
+			transition: 0.6s ease-in-out;
+			&:hover {
+				opacity: 0.6;
+			    transform: scale(0.9);
+			}
+		}
+		&__text {
+			padding-top: 20px;
+			line-height: 24px;
+			letter-spacing: 0.35px;
+		}
+	}
+	&-contacts {
+		width: 100%;
+		max-width: 297px;
+		@include sm-block(){
+			max-width: 100%;
+		}
+		@media(max-width: 909px) {
+			max-width: 60%;
+		}
+		&__title {
+			font-family: $blackRoboto;
+			text-transform: uppercase;
+			padding: 13px 0 28px;
+		}
+		&__link {
+			background: url('../img/footer-ico/marker-icon.png') 3px 1px no-repeat;
+			display: block;
+			padding: 0 0 12px 30px;
+			line-height: 24px;
+			letter-spacing: 0.35px;
+			&:hover {
+				text-decoration: underline;
+			}
+			&.phone-link {
+				background: url('../img/footer-ico/phone-icon.png') 3px 1px no-repeat;
+			}
+		}
+	}
+	&-touch {
+		width: 100%;
+   		max-width: 290px;
+   		&__title {
+			font-family: $blackRoboto;
+			text-transform: uppercase;
+			padding: 13px 0 28px;
+		}
+		&__form {
+			display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    padding-bottom: 27px;
+		}
+	}
+	&-social {
+		display: flex;
+		&__link {
+			width: 35px;
+		    height: 35px;
+		    border: 1px solid #fff;
+		    border-radius: 50%;
+		    margin-right: 8px;
+		    background-image: url('../img/footer-ico/social.png');
+		    background-repeat: no-repeat;
+		    background-position-y: 80%;
+		}
+	}
+	&-bottom {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding-top: 58px;
+		@media(max-width: 909px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&-info {
+		&__list {
+			display: flex;
+			&-item {
+				padding-right: 29px;
+				text-transform: uppercase;
+				line-height: 24px;
+				letter-spacing: 0.35px;
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}

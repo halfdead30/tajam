@@ -1,0 +1,132 @@
+.header {
+	&--modifier {
+		background: url('../img/bg/header-bg.jpg') 0 0 no-repeat;
+		background-size: cover;
+		padding: 15px 0 70px;
+		@include sm-block(){
+			padding: 15px 0 40px;
+		}
+	}
+	&-item {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		@include xs-block(){
+			justify-content: center;
+		}
+		@include sm-block(){
+			flex-direction: column;
+			justify-content: center;
+		}
+		&__logo {
+			cursor: pointer;
+			transition: 0.6s ease-in-out;
+			&:hover {
+				opacity: 0.6;
+				transform: scale(0.9);
+			}
+		}
+	}
+	&-nav {
+		margin-left: auto;
+		@include xs-block(){
+			display: none;
+		}
+		@include sm-block(){
+			margin: 50px 0 0;
+		}
+		&__menu {
+			display: flex;
+			&-item {
+				&:first-child {
+					margin-left: 0;
+				}
+				margin-left: 20px;
+				letter-spacing: 0.33px;
+				@include xs-block(){
+					margin-left: 0;
+				}
+				a {
+					font-family: $blackRoboto;
+					font-size: 13px;
+					text-transform: uppercase;
+					transition: 0.5s ease-in-out;
+					&:hover {
+					    color: $lightBlueColor;
+					}
+				}
+			}
+		}
+	}
+	&-container {
+		width: 100%;
+		max-width: 960px;
+		padding: 143px 10px 55px;
+		margin: 0 auto;
+		text-align: center;
+		@include xs-block(){
+			padding: 55px 20px 0;
+		}
+	}
+	&-slider {
+		&__title {
+			padding-bottom: 24px;
+			&::after {
+				content: '';
+				display: block;
+				margin: 25px auto 0;
+				width: 50px;
+				height: 1px;
+				background-color: $lightBlueColor;
+			}
+		}
+		&__text {
+			width: 100%;
+			max-width: 771px;
+			margin: 0 auto;
+			padding-bottom: 59px;
+			line-height: 24px;
+			letter-spacing: 0.7px;
+		}
+		&__btn {
+			padding-bottom: 30px;
+		}
+	}
+}
+
+.active-link {
+	color: $lightBlueColor
+}
+
+.slick-dots {
+	bottom: -30%;
+	@include xs-block(){
+		bottom: -15%;
+	}
+	li {
+		width: 15px;
+		margin: 0;
+		padding: 0;
+		button {
+			width: 10px;
+		    height: 10px;
+		    border: 1px solid #2c2c2c;
+		    border-radius: 50%;
+		    transition: border-color .5s;
+		    padding: 0;
+		    margin: 0;
+		    &::before {
+		    	content: '';
+		    }
+		}
+	}
+}
+
+.slick-dots li button:hover, .slick-dots li.slick-active button {
+    border-color: #00e0d0;
+    background: #00e0d0;
+}
+
+.slick-slide {
+    outline: none;
+}

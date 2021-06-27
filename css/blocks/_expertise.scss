@@ -1,0 +1,72 @@
+.expertise {
+	&--modifier {
+		color: $blueColor;
+		padding: 73px 0;
+		text-align: center;
+		@include sm-block(){
+			padding: 40px 0;
+		}
+	}
+	&-text {
+		font-family: $regularPlayfair;
+		margin: 18px 0 103px;
+		@include line();
+	}
+	&-item {
+		width: 100%;
+		max-width: 320px;
+		padding: 30px 33px 37px;
+		border-bottom: 1px solid #ebebeb;
+		&:nth-last-child(-n+3) {
+			border-bottom: none;
+			@media(max-width: 959px) {
+				border-bottom: 1px solid #ebebeb;
+			}
+		}
+		&:nth-child(3n+2) {
+			border: 1px solid #ebebeb;
+    		border-top: none;
+    		@media(max-width: 959px) {
+			    border: transparent;
+			    border-bottom: 1px solid #ebebeb;
+    		}
+		}
+		@include xs-block(){
+			border: none;
+			&:nth-last-child(-n+2) {
+				border: none;
+			}
+			&:nth-child(2n+1) {
+				border: none;
+			}
+			&:nth-child(even) {
+				border-bottom: none;
+			}
+		}
+		@media(max-width: 959px) {
+			&:nth-child(2n+1) {
+				border-right: 1px solid #ebebeb;
+			}
+			&:nth-last-child(-n+2) {
+				border-bottom: none;
+			}
+		}
+		&:nth-last-child(-n+2) {
+			border-bottom: none;
+		}
+		&__title {
+			font-family: $blackRoboto;
+			text-transform: uppercase;
+			margin: 35px 0 29px;
+		}
+		&__text {
+			font-family: $lightRoboto;
+			line-height: 22px;
+			color: #333;
+		}
+	}
+}
+
+.expertise .row {
+	justify-content: center;
+}
